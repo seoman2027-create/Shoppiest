@@ -32,7 +32,7 @@ function App() {
     }, [theme]);
 
     return(
-        <Router className="app" basename="/">
+        <HashRouter>
             <div className="heading">
                 <Routes>
                     <Route path="/" element={<Home theme={theme} setTheme={setTheme} />} />
@@ -53,7 +53,7 @@ function App() {
                     <Route path={"/Footer"} element={<Footer />} />
                 </Routes>
             </div>
-        </Router>
+        </HashRouter>
     )
 }
 
