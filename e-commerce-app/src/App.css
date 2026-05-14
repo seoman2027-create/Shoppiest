@@ -1,0 +1,1055 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+body {
+    font-family: "Google Sans Flex", sans-serif;
+}
+select{
+    color: black;
+    font-family: "Google Sans Flex", sans-serif;
+    background: none;
+    font-weight: bolder;
+    border: none;
+    padding: 10px;
+}
+/* This is for only App.jsx
+*/
+.app{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+/* This is for only Register.jsx
+*/
+
+.r-body{
+    background-color: #312770;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 10px;
+    background-color: goldenrod;
+    border-radius: 7px;
+}
+.r_label{
+    text-align: center;
+}
+.r_input{
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 400px;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+.last{
+    width: 18px;
+    height: 18px;
+}
+.r_a_link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.r_signButton{
+    margin: auto;
+    width: 200px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgb(130, 221, 102);
+    color: white;
+    border: none;
+}
+.a_link{
+    text-decoration: none;
+    color: rgb(130, 221, 102);
+}
+.loginContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* This is for only Login.jsx
+*/
+
+.l-body{
+    background-color: #312770;
+}
+.l_main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+}
+.l_label{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.l_input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    width: 400px;
+    height: 20px;
+}
+.l_button{
+    margin: 50px 10px 10px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(130, 221, 102);
+    color: black;
+    font-weight: bold;
+}
+/* This is for only Home.jsx
+*/
+
+
+
+
+.h-main-first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-image: url("./Photos/Home-bcg.png");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 100vh;
+}
+.h-main-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 40px;
+    margin-right: 240px;
+    color: black;
+}
+.h-main-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    margin-top: 200px;
+    margin-bottom: 0;
+}
+.h-main-second{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+.h-second-h1{
+    display: block;
+    text-align: center;
+    color: white;
+    margin-bottom: 270px;
+}
+.h-second-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-image: url("../public/men-model.png");
+    background-size: cover;
+    width: 45%;
+    background-position: center;
+    height: 55vh;
+}
+.h-second-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-image: url("../public/home.webp");
+    background-size: cover;
+    width: 45%;
+    background-position: center;
+    height: 55vh;
+}
+.h-main-third{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+.h-third-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-image: url("../public/accessories.jpg");
+    background-size: cover;
+    width: 45%;
+    background-position: center;
+    height: 55vh;
+}
+.h-third-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-image: url("../public/electronics.webp");
+    background-size: cover;
+    width: 45%;
+    background-position: center;
+    height: 55vh;
+}
+.h-main-fourth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+.h-fourth-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-image: url("../public/beauty-healthy.png");
+    background-size: cover;
+    width: 45%;
+    background-position: center;
+    height: 55vh;
+}
+.h-fourth-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background-image: url("../public/gifts.png");
+    background-size: cover;
+    width: 45%;
+    background-position: center;
+    height: 55vh;
+}
+.h-main-fifth{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../public/promotions.png");
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 60vh;
+    color: white;
+}
+.h-main-2 p{
+    margin: auto 10px;
+}
+.h-h-links{
+    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.h_sceletone{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: clip;
+}
+.h_input{
+    margin: auto;
+    padding: 15px 40px 15px 15px;
+    border-radius: 8px;
+    width: 100%;
+    background-color: rgb(224, 215, 199);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    max-width: 500px;
+    border: 1px dashed;
+}
+.div-span{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.h-main-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 70px;
+    padding: 10px 5px 5px 5px;
+    background-color: white;
+    color: black;
+    margin: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 17px;
+}
+.h-main-span p{
+    font-weight: normal;
+}
+.h_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.h_h3{
+    color: black;
+    font-family: "Google Sans Flex", sans-serif;
+}
+/*.h_h1{
+    color: black;
+}*/
+.h_par{
+    font-family: Google Sans Flex, sans-serif;
+    margin-left: 10px;
+}
+
+.h_a_img{
+    transition: transform 0.3s ease;
+}
+.h_a_img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+/* This is for only shopping-cart.jsx
+*/
+
+
+
+
+
+.base{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: clip;
+}
+.s_main{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 50px;
+}
+.s_main_first{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #000000;
+    width: 70%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 0 10px 0 20px;
+}
+.s_main_second{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    max-width: fit-content;
+    border: 1px dashed black;
+    border-radius: 8px;
+    background-color: white;
+    margin: auto 20px auto auto;
+}
+/*@media(max-width: 768px){
+    .s_main_first{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: #000000;
+        width: 58%;
+        flex-wrap: wrap;
+        border-radius: 10px;
+    }
+    .s_main_second{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: black;
+        padding-left: 10px;
+        width: 42%;
+        max-width: 300px;
+        flex-wrap: wrap;
+        min-height: 100%;
+        border: 0.5px dashed black;
+        border-radius: 8px;
+        flex-wrap: nowrap;
+        padding: 10px;
+    }
+    .s_m_input{
+    }
+}*/
+.s_m_input{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 13px 0 5px 0;
+}
+.s_l_button{
+    width: 100%;
+    color: white;
+    height: 30px;
+    font-size: 15px;
+}
+.s_l_label{
+    margin: 10px auto 10px 0;
+    font-size: 14px;
+}
+.billing{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.s_bottom{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    color: gray;
+    margin-top: 40px;
+}
+.s_c_link{
+    font-size: 14px;
+    color: black;
+}
+
+/*
+    This lines belongs to Payment-info.jsx
+*/
+
+
+
+
+
+
+.p_i_body{
+    background-color: #bfbbbb;
+}
+.p-i_main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.p-i_first{
+
+}
+
+.p-i-last{
+    display: flex;
+    flex-direction: row;
+}
+
+.p-i_second{
+    display: flex;
+    flex-direction: column;
+    background-color: #eeefec;
+    border-radius: 15px;
+    padding: 15px;
+    gap: 30px;
+    margin: 20px;
+}
+
+.p-i_input{
+    border-radius: 5px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #e1dede;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.p-i-s_input{
+    display: flex;
+    flex-direction: row;
+}
+
+.p-i_submit{
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    background-color: #f66666;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+ From this line About.jsx starts
+*/
+.about-div{
+    background-color: #393838;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+/*
+From this line Contact.jsx starts
+*/
+.contact-main-div{
+    width: 100%;
+}
+.c-main-last{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 50px;
+}
+textarea{
+    resize: vertical;
+}
+.c-main-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: 10px 20px;
+    width: 90%;
+    padding: 20px;
+}
+.c-first_div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.c-second_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+form input{
+    font-family: "Google Sans Flex", sans-serif;
+}
+.c-input{
+    height: 40px;
+    width: 90%;
+    border-radius: 7px;
+    border: 1px solid #e1dede;
+    margin: 10px;
+    font-family: "Google Sans Flex", sans-serif;
+}
+.con-in-but{
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: "Google Sans Flex", sans-serif;
+}
+.c_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+}
+@media(max-width: 800px){
+    .c-main-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+}
+/*
+From this line Policy.jsx starts
+*/
+
+
+
+.policy{
+    background-color: #bfbbbb;
+}
+.main{
+    color: black;
+}
+.p-first-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #312770;
+    margin: 10px 20px 60px 20px;
+    color: white;
+    padding: 40px;
+}
+.p-second-div, .p-third-div ,
+.p-fourth-div, .p-fifth-div,
+.p-sixth-div, .p-seventh-div ,
+.p-eighth-div{
+    margin: 20px;
+    text-align: left;
+    padding: 40px;
+    background-color: white;
+}
+.p-third-div{}
+.p-fourth-div{}
+.p-fifth-div{}
+.p-sixth-div{}
+.p-seventh-div{}
+.p-eighth-div{}
+
+
+
+/*
+From this line begins Profile.jsx
+*/
+
+.profile{
+    background-color: #e1dede;
+}
+.prof-first-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8f8d8d;
+    padding: 15px;
+    margin: 15px;
+}
+.prof-main-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.prof-first-div-1,
+.prof-first-div-2,
+.prof-first-div-3,
+.prof-first-div-4{
+    padding:  20px 20px 20px 5px;
+    margin: 20px 20px 20px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+sup{
+    color: red;
+    font-weight: bold;
+}
+.p-input{
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #e1dede;
+}
+
+.prof-button{
+    height: 35px;
+    width: 120px;
+    font-size: 13px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/*
+From this line Items.jsx starts
+*/
+
+
+.items-sceletone{
+    width: 100%;
+    background-color: #e1dede;
+}
+.items-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+.items-starter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 35px;
+    background-image: url("../public/shopping-2.jpg");
+    background-size: cover;
+    height: 300px;
+}
+#items-span-first{
+    font-size: 30px;
+    font-weight: bold;
+}
+.items-categories{
+    margin: 40px 20px;
+    color: black;
+    background-color: white;
+    padding: 20px 40px;
+    width: 40%;
+    min-width: 167px;
+}
+#ul-categories {
+    padding: 10px 10px 10px 0;
+    width: 100%;
+    max-width: fit-content;
+}
+.items-filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 80%;
+}
+#items-select{
+    background-color: white;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+}
+#items-search-input{
+    border-radius: 10px;
+    border: none;
+    width: 40%;
+    min-width: 70px;
+}
+.items-filter *{
+    padding: 10px;
+}
+.items-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.items-product-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 280px;
+    width: 190px;
+    padding: 20px;
+    margin: 20px 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+.items-product-div:hover{
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease;
+}
+.items-link{
+    color: black;
+    text-decoration: none;
+    margin-left: 0;
+    transition: transform 0.3s ease;
+}
+.items-link:hover{
+    color: gray;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.items-product-h4{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+.i-div-button{
+    background-color: #312770;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    max-width: fit-content;
+    padding: 8px 16px;
+}
+.items-main-first{}
+
+/*
+From this line Promotions.jsx starts
+*/
+
+.promo_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+.promo_main{
+    width: 100%;
+}
+
+.promo_main_first{
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: center;
+}
+
+/*
+    From this line begins Navbar.jsx
+*/
+
+.n_search_input{
+    position: absolute;
+    top: 78px;
+    right: 190px;
+    height: 30px;
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    transform: scale(0.95);
+}
+.n_search_input:active{
+    transition: transform 0.3s ease;
+}
+.n-h-links{
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.n-h-links:hover{
+    border-radius: 13%;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.n_f_div{
+    margin-left: 5px;
+}
+.n_s_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 13px;
+}
+.theme-icon {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.theme-icon.light {
+    transform: rotate(360deg);
+}
+
+.theme-icon.dark {
+    transform: rotate(180deg);
+}
+
+.n_img_link{
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+.n_img_link:hover{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+.n_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+}
+.n_navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: orange;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.n-select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.active{
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+/*
+    From this line begins Footer.jsx
+*/
+
+.footer-main{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    color: white;
+    margin-top: 40px;
+}
+.f-basic-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.f-hr{
+    width: 100%;
+}
+.f-con-address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0 10px;
+}
+.f-name-address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border: none;
+    margin: 0 10px;
+}
+.f-hr:hover{
+    border-radius: 13%;
+    cursor: pointer;
+    transform: scale(1.45);
+    transition: transform 0.3s ease;
+}
+.f-img-address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0 10px;
+}
+.img-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.footer-foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.f-main-first{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    margin: 0 10px;
+}
+ul{
+    list-style-position: inside;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+/*
+From this line begins Product-details.jsx
+*/
+
+.details-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.detail-link{
+    color: black;
+    text-decoration: none;
+    margin: 15px 0 10px 15px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.detail-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 280px;
+    width: 190px;
+    padding: 20px;
+    margin: 20px 5px;
+    background-color: rgba(204, 200, 200, 0.53);
+    border-radius: 10px;
+}
+.div-det{
+    display: flex;
+    flex-direction: row;
+}
