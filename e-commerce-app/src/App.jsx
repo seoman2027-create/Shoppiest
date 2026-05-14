@@ -32,7 +32,7 @@ function App() {
     }, [theme]);
 
     return(
-        <Router className="app">
+        <Router className="app" basename="/">
             <div className="heading">
                 <Routes>
                     <Route path="/" element={<Home theme={theme} setTheme={setTheme} />} />
