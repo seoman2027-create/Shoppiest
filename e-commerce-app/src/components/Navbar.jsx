@@ -141,7 +141,7 @@ function Navbar({theme, setTheme}) {
                         to={"/Profile"}
                     >
                         <img
-                            src={"./User_account.png"}
+                            src={"./user_account.png"}
                             alt="account-link"
                             className="n_img_link"
                             width={"20px"}
