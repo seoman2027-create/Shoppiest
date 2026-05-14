@@ -60,7 +60,7 @@ function Navbar({theme, setTheme}) {
                         to={"/"}
                     >
                         <img
-                            src="/Shoppiest-logo-ed.png"
+                            src="/shoppiest-logo-ed.png"
                             alt="Shoppiest-logo"
                             width={"130px"}
                             className="n_a_img"
