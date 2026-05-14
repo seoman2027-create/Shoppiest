@@ -41,7 +41,7 @@ function Navbar({theme, setTheme}) {
                     >
                         <img
                             className={`theme-icon ${theme}`}
-                            src={theme === "light" ? "/dark.png" : "/light.png"}
+                            src={theme === "light" ? "./dark.png" : "./light.png"}
                             alt={theme === "light" ? "Switch to dark" : "Switch to light"}
                             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                             style={{
