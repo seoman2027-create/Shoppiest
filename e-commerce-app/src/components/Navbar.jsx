@@ -37,7 +37,7 @@ function Navbar({theme, setTheme}) {
                         <option value="eu">EUR</option>
                     </select>
                     <a
-                        href="#link"
+                        href="#"
                     >
                         <img
                             className={`theme-icon ${theme}`}
@@ -156,7 +156,7 @@ function Navbar({theme, setTheme}) {
                         to={"/ShoppingCart"}
                     >
                         <img
-                            src={"Sebet-icon.png"}
+                            src={"sebet-icon.png"}
                             alt="sebet-logo"
                             className="n_img_link"
                             style={{

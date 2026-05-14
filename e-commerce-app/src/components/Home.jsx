@@ -66,7 +66,7 @@ function Home({theme, setTheme}) {
                             <p>Security payments</p>
                             <p>
                                 <img
-                                    src="/Support.png"
+                                    src="/support.png"
                                     alt="security icons"
                                     style={{
                                         width: "35px",
