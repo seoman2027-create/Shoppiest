@@ -9,7 +9,7 @@ import {Link, useLocation} from "react-router-dom";
 
 export const allProducts = [
     { name: "Wireless headphones", category: "electronics", price: 120.19, img: "./headphones.png", width: 200, height: 180, source: "/Details?item=headphones"},
-    { name: "Casual t-shirt", category: "fashion", price: 35.35, img: "./T-shirt.png", width: 150, height: 150, source: "/Details?item=t-shirt" },
+    { name: "Casual t-shirt", category: "fashion", price: 35.35, img: "./t-shirt.png", width: 150, height: 150, source: "/Details?item=t-shirt" },
     { name: "Nike Running shoes", category: "shoes", price: 95.89, img: "./shoes.png", width: 160, height: 160, source: "/Details?item=shoes" },
     { name: "Apple smartwatch", category: ["electronics", "gifts"], price: 250.15, img: "./smartwatch.png", width: 160, height: 160, source: "/Details?item=smartwatch" },
     { name: "Leather handback", category: "fashion", price: 80.22, img: "./handback.png", width: 160, height: 160, source: "/Details?item=handback" },
