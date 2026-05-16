@@ -109,7 +109,7 @@ function Footer() {
                             >
                                 <img
                                     className="f-hr"
-                                    src="/github.png"
+                                        src={`${process.env.PUBLIC_URL}/github.png`}
                                     alt="GitHub logo"
                                     style={{
                                         width: "18px",
@@ -124,7 +124,7 @@ function Footer() {
                             >
                                 <img
                                     className="f-hr"
-                                    src="/instagram.png"
+                                    src={`${process.env.PUBLIC_URL}/instagram.png`}
                                     alt="Instagram logo"
                                     style={{
                                         width: "18px",
@@ -139,7 +139,7 @@ function Footer() {
                             >
                                 <img
                                     className="f-hr"
-                                    src="/twitter.png"
+                                    src={`${process.env.PUBLIC_URL}/twitter.png`}
                                     alt="X logo"
                                     style={{
                                         width: "18px",
@@ -156,7 +156,7 @@ function Footer() {
                             >
                                 <img
                                     className="f-hr"
-                                    src="/facebook-main.png"
+                                    src={`${process.env.PUBLIC_URL}/facebook-main.png`}
                                     alt="Facebook logo"
                                     style={{
                                         width: "18px",
@@ -171,7 +171,7 @@ function Footer() {
                             >
                                 <img
                                     className="f-hr"
-                                    src="/pinterest.png"
+                                    src={`${process.env.PUBLIC_URL}/pinterest.png`}
                                     alt="Pinterset logo"
                                     style={{
                                         width: "18px",
@@ -231,7 +231,7 @@ function Footer() {
             <div className="footer-foot">
                 <a href={"/"}>
                     <img
-                        src={"./Shoppiest-white.png"}
+                        src={`${process.env.PUBLIC_URL}/shoppiest-white.png`}
                         alt="shoppie-stack"
                         width={"130px"}
                         style={{

@@ -63,7 +63,7 @@ function Contact() {
                             target={"_blank"}
                         >
                             <img
-                                src="/facebook-main.png"
+                                src={`${process.env.PUBLIC_URL}/facebook-main.png`}
                                 alt="Facebook logo"
                                 style={{
                                     width: "18px",
@@ -76,7 +76,7 @@ function Contact() {
                             target={"_blank"}
                         >
                             <img
-                                src="/instagram.png"
+                                src={`${process.env.PUBLIC_URL}/instagram.png`}
                                 alt="Instagram logo"
                                 style={{
                                     width: "18px",
@@ -89,7 +89,7 @@ function Contact() {
                             target={"_blank"}
                         >
                             <img
-                                src="/twitter.png"
+                                src={`${process.env.PUBLIC_URL}/twitter.png`}
                                 alt="X logo"
                                 style={{
                                     width: "18px",
@@ -102,7 +102,7 @@ function Contact() {
                             target={"_blank"}
                         >
                             <img
-                                src="/pinterest.png"
+                                src={`${process.env.PUBLIC_URL}/pinterest.png`}
                                 alt="Pinterset logo"
                                 style={{
                                     width: "18px",
@@ -115,7 +115,7 @@ function Contact() {
                             target={"_blank"}
                         >
                             <img
-                                src="/github.png"
+                                src={`${process.env.PUBLIC_URL}/github.png`}
                                 alt="GitHub logo"
                                 style={{
                                     width: "18px",

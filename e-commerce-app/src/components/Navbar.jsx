@@ -41,7 +41,7 @@ function Navbar({theme, setTheme}) {
                     >
                         <img
                             className={`theme-icon ${theme}`}
-                            src={theme === "light" ? "./dark.png" : "./light.png"}
+                            src={theme === "light" ? `${process.env.PUBLIC_URL}/dark.png` : `${process.env.PUBLIC_URL}/light.png`}
                             alt={theme === "light" ? "Switch to dark" : "Switch to light"}
                             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                             style={{
@@ -60,7 +60,7 @@ function Navbar({theme, setTheme}) {
                         to={"/"}
                     >
                         <img
-                            src="/shoppiest-logo-ed.png"
+                            src={`${process.env.PUBLIC_URL}/shoppiest-logo-ed.png`}
                             alt="Shoppiest-logo"
                             width={"130px"}
                             className="n_a_img"
@@ -117,7 +117,7 @@ function Navbar({theme, setTheme}) {
                     </NavLink>
                     <a href={"#link"}>
                         <img
-                            src={"./search_icon.png"}
+                            src={`${process.env.PUBLIC_URL}/search_icon.png`}
                             alt="search-link"
                             className="n_img_link"
                             style={{
@@ -141,7 +141,7 @@ function Navbar({theme, setTheme}) {
                         to={"/Profile"}
                     >
                         <img
-                            src={"./user_account.png"}
+                            src={`${process.env.PUBLIC_URL}/user_account.png`}
                             alt="account-link"
                             className="n_img_link"
                             width={"20px"}
@@ -156,7 +156,7 @@ function Navbar({theme, setTheme}) {
                         to={"/ShoppingCart"}
                     >
                         <img
-                            src={"sebet-icon.png"}
+                            src={`${process.env.PUBLIC_URL}/sebet-icon.png`}
                             alt="sebet-logo"
                             className="n_img_link"
                             style={{
