@@ -56,7 +56,7 @@ function Home({theme, setTheme}) {
                         <div className="h-main-2">
                             <p>
                                 <img
-                                    src="/security.png"
+                                    src={`${process.env.PUBLIC_URL}/security.png`}
                                     alt="security icons"
                                     style={{
                                         width: "35px",
@@ -66,7 +66,7 @@ function Home({theme, setTheme}) {
                             <p>Security payments</p>
                             <p>
                                 <img
-                                    src="/support.png"
+                                        src={`${process.env.PUBLIC_URL}/support.png`}
                                     alt="security icons"
                                     style={{
                                         width: "35px",
@@ -76,7 +76,7 @@ function Home({theme, setTheme}) {
                             <p>Customer Support</p>
                             <p>
                                 <img
-                                    src="/delivery.png"
+                                    src={`${process.env.PUBLIC_URL}/delivery.png`}
                                     alt="security icons"
                                     style={{
                                         width: "40px",
@@ -128,7 +128,7 @@ function Home({theme, setTheme}) {
                                 fontWeight: "bold",
                                 textDecoration: "none",
                             }}
-                            to="//Items?category=home"
+                            to="Items?category=home"
                         >
                             Let's look
                         </Link>
@@ -147,7 +147,7 @@ function Home({theme, setTheme}) {
                                 fontWeight: "bold",
                                 textDecoration: "none",
                             }}
-                            to="/Items?category=accessories"
+                            to="Items?category=accessories"
                         >
                             Let's look
                         </Link>
