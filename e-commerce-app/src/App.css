@@ -820,24 +820,25 @@ From this line Items.jsx starts
 From this line Promotions.jsx starts
 */
 
-.promo_head{
+.promo_main{
+    width: 100%;
+    color: black;
+}
+.promo_main_first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.main-promos{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: lightgray;
-    overflow: hidden;
-}
-
-.promo_main{
-    width: 100%;
-}
-
-.promo_main_first{
-    width: 100%;
-    height: 100%;
-    color: black;
-    text-align: center;
+    flex-wrap: wrap;
+    margin: 40px;
+    padding: 40px;
 }
 
 /*
@@ -975,6 +976,9 @@ From this line Promotions.jsx starts
     border: none;
     margin: 0 10px;
 }
+.f-h4-address{
+    height: 40px;
+}
 .f-hr:hover{
     border-radius: 13%;
     cursor: pointer;
@@ -1010,6 +1014,7 @@ From this line Promotions.jsx starts
     justify-content: start;
     align-items: flex-start;
     margin: 0 10px;
+    padding: 0;
 }
 ul{
     list-style-position: inside;
@@ -1034,7 +1039,6 @@ From this line begins Product-details.jsx
 .content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 .detail-item{

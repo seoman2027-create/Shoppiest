@@ -32,8 +32,7 @@ function Details() {
                                 justifyContent: "center",
                                 width: product.width,
                                 height: product.height,
-                                marginTop: "20px",
-                                padding: "10px",
+                                margin: "50px auto 0 auto",
                             }}
                         />
                         <p

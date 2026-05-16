@@ -7,7 +7,9 @@ function Footer() {
         <div className="footer-main">
             <div className="f-basic-con">
                 <div className="f-name-address">
-                    <h4>Customer Service</h4>
+                    <h4
+                        className="f-h4-address"
+                    >Customer Service</h4>
                     <hr
                         className="f-hr"
                     />
@@ -59,7 +61,9 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="f-con-address">
-                    <h4>Quick Links</h4>
+                    <h4
+                        className="f-h4-address"
+                    >Quick Links</h4>
                     <hr
                         className="f-hr"
                     />
@@ -96,7 +100,9 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="f-img-address">
-                    <h4>Follow us</h4>
+                    <h4
+                        className="f-h4-address"
+                    >Follow us on Social media</h4>
                     <hr
                         className="f-hr"
                     />
@@ -183,7 +189,9 @@ function Footer() {
                     </div>
                 </div>
                 <div className="f-main-first">
-                    <h4>Newsletter</h4>
+                    <h4
+                        className="f-h4-address"
+                    >Newsletter</h4>
                     <hr
                         className="f-hr"
                     />
