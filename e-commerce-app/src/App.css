@@ -161,8 +161,12 @@ select{
 .h-second-h1{
     display: block;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    margin-bottom: 270px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto 30px;
+    font-size: 23px;
 }
 .h-second-1{
     display: flex;
@@ -265,9 +269,9 @@ select{
     align-items: center;
     background-image: url("../public/promotions.png");
     background-size: cover;
-    width: 100%;
+    width: 95%;
     background-position: center;
-    height: 60vh;
+    height: 500px;
     color: white;
 }
 .h-main-2 p{
@@ -306,15 +310,15 @@ select{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75px;
-    height: 70px;
-    padding: 10px 5px 5px 5px;
+    width: 65px;
+    height: 60px;
+    padding: 15px 5px 5px 5px;
     background-color: white;
     color: black;
-    margin: 20px;
+    margin: 10px;
     font-weight: bold;
     border-radius: 50%;
-    font-size: 17px;
+    font-size: 15px;
 }
 .h-main-span p{
     font-weight: normal;
@@ -344,6 +348,42 @@ select{
 .h_a_img:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease;
+}
+.h-blog-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    margin: 20px;
+    height: 360px;
+    align-items: center;
+    background-image: url("../public/summer-pack.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.h-blog-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    height: 360px;
+    background-image: url("../public/trending-items.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.h-blog-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    height: 360px;
+    background-image: url("../public/customer-exp.webp");
+    background-size: cover;
+    background-position: center;
 }
 /* This is for only shopping-cart.jsx
 */
@@ -712,6 +752,14 @@ From this line Items.jsx starts
     justify-content: center;
     align-items: start;
 }
+@media(max-width: 768px){
+    .items-main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+}
 .items-starter{
     display: flex;
     flex-direction: column;
@@ -720,6 +768,7 @@ From this line Items.jsx starts
     padding: 35px;
     background-image: url("../public/shopping-2.jpg");
     background-size: cover;
+    background-position: center;
     height: 300px;
 }
 #items-span-first{
@@ -873,6 +922,15 @@ From this line Promotions.jsx starts
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+.active{
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
 .n_f_div{
     margin-left: 5px;
 }
@@ -883,6 +941,29 @@ From this line Promotions.jsx starts
     align-items: center;
     padding: 20px;
     gap: 13px;
+}
+.menu-icon{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        gap: 5px;
+    }
+    .n-h-links{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-icon{
+        display: block;
+        color: black;
+        cursor: pointer;
+        font-size: 23px;
+        margin: auto auto auto 10px;
+    }
 }
 .theme-icon {
     transition: transform 0.6s ease, opacity 0.6s ease;
@@ -929,15 +1010,6 @@ From this line Promotions.jsx starts
     justify-content: space-around;
     align-items: center;
 }
-.active{
-    border-bottom: 2px solid black;
-    font-size: 14px;
-    color: black;
-    font-weight: bolder;
-    text-decoration: none;
-    margin-right: 5px;
-    transition: transform 0.3s ease;
-}
 /*
     From this line begins Footer.jsx
 */
@@ -957,6 +1029,12 @@ From this line Promotions.jsx starts
     margin: 10px;
     padding: 20px;
     text-align: left;
+}
+@media screen and (max-width: 768px){
+    .f-basic-con{
+        margin: auto;
+        flex-wrap: wrap;
+    }
 }
 .f-hr{
     width: 100%;
@@ -1057,3 +1135,7 @@ From this line begins Product-details.jsx
     display: flex;
     flex-direction: row;
 }
+/*
+    From this line begins Blog.jsx
+*/
+

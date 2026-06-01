@@ -7,6 +7,7 @@ function Navbar({theme, setTheme}) {
     const [showSearch, setShowSearch] = useState(false);
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem("userToken");
+    const [open, setOpen] = useState(false);
 
 
     const handleClick = () => {
@@ -19,22 +20,34 @@ function Navbar({theme, setTheme}) {
     return (
         <>
             <nav className="n_navbar">
-                <p>Free shipping on orders over $50</p>
+                <p
+                    style={{
+                        textAlign: "center",
+                        maxWidth: "37%",
+                        fontSize: "16px",
+                    }}
+                >Free shipping on orders over $50</p>
                 <div className="n-select">
                     <select
                         style={{
                             marginRight: "10px"
                         }}
                     >
-                        <option value="az" >AZE</option>
                         <option value="en">ENG</option>
-                        <option value="ru">RUS</option>
+                        <option value="rus">RUS</option>
+                        <option value="fr">FR</option>
+                        <option value="ger">GER</option>
+                        <option value="esp">ESP</option>
+                        <option value="tr">TR</option>
+                        <option value="az">AZE</option>
                     </select>
                     <select>
-                        <option value="az">AZN</option>
-                        <option value="en">USD</option>
-                        <option value="ru">GBP</option>
-                        <option value="eu">EUR</option>
+                        <option value="usd">$ - USD</option>
+                        <option value="gpb">£ - GPB</option>
+                        <option value="euro">€ - EURO</option>
+                        <option value="azn">₼ - AZN</option>
+                        <option value="cny">¥ - CNY</option>
+                        <option value="try">₺ - TRY</option>
                     </select>
                     <a
                         href="#"
@@ -62,59 +75,66 @@ function Navbar({theme, setTheme}) {
                         <img
                             src={`${process.env.PUBLIC_URL}/shoppiest-logo-ed.png`}
                             alt="Shoppiest-logo"
-                            width={"130px"}
                             className="n_a_img"
-                            style={{margin:"10px 0 10px 20px"}}
+                            style={{
+                                margin:"auto auto auto 10px",
+                                width:"130px",
+                        }}
                         />
                     </Link>
                 </div>
+                <div className="menu-icon" onClick={() => setOpen(!open)}>{open ? "✕" : "☰"}</div>
                 <div className="n_s_div">
-                    <NavLink
-                        className={
-                            ({ isActive }) => isActive ? "active" : "n-h-links"
-                        }
-                        to={"/"}
-                        end
-                    >
-                        HOME
-                    </NavLink>
-                    <NavLink
-                        className={
-                            ({ isActive }) => isActive ? "active" : "n-h-links"
-                        }
-                        to={"/Items"}
-                        end
-                    >
-                        ITEMS
-                    </NavLink>
-                    <NavLink
-                        className={
-                            ({ isActive }) => isActive ? "active" : "n-h-links"
-                        }
-                        to={"/Promo"}
-                        end
-                    >
-                        PROMOTIONS
-                    </NavLink>
-                    <NavLink
-                        className={
-                            ({ isActive }) => isActive ? "active" : "n-h-links"
-                        }
-                        to={"/About"}
-                        end
-                    >
-                        ABOUT
-                    </NavLink>
-                    <NavLink
-                        className={({ isActive }) => isActive ? "active" : "n-h-links"}
-                        to={"/Contact"}
-                        end
-                        style={{
-                            marginRight: "20px",
-                        }}
-                    >
-                        CONTACT
-                    </NavLink>
+                    <div className={open ? "active" : "nav-links"}>
+                        <NavLink
+                            className={
+                                ({ isActive }) => isActive ? "active" : "n-h-links"
+                            }
+                            to={"/"}
+                            end
+                        >
+                            HOME
+                        </NavLink>
+                        <NavLink
+                            className={
+                                ({ isActive }) => isActive ? "active" : "n-h-links"
+                            }
+                            to={"/Items"}
+                            end
+                        >
+                            ITEMS
+                        </NavLink>
+                        <NavLink
+                            className={
+                                ({ isActive }) => isActive ? "active" : "n-h-links"
+                            }
+                            to={"/Promo"}
+                            end
+                        >
+                            PROMOTIONS
+                        </NavLink>
+                        <NavLink
+                            className={
+                                ({ isActive }) => isActive ? "active" : "n-h-links"
+                            }
+                            to={"/About"}
+                            end
+                        >
+                            ABOUT
+                        </NavLink>
+                        <NavLink
+                            className={
+                                ({ isActive }) => isActive ? "active" : "n-h-links"
+                            }
+                            to={"/Contact"}
+                            end
+                            style={{
+                                marginRight: "20px"
+                            }}
+                        >
+                            CONTACT
+                        </NavLink>
+                    </div>
                     <a href={"#link"}>
                         <img
                             src={`${process.env.PUBLIC_URL}/search_icon.png`}
@@ -122,7 +142,8 @@ function Navbar({theme, setTheme}) {
                             className="n_img_link"
                             style={{
                                 width:"20px",
-                                padding: "10px"
+                                padding: "10px",
+                                margin: "auto"
                             }}
                             onClick={() => setShowSearch(!showSearch)}
                         />
@@ -149,6 +170,7 @@ function Navbar({theme, setTheme}) {
                             style={{
                                 padding:"10px",
                                 width: "20px",
+                                margin: "auto"
                             }}
                         />
                     </Link>
@@ -162,7 +184,8 @@ function Navbar({theme, setTheme}) {
                             style={{
                                 width:"28px",
                                 flexWrap:"wrap",
-                                padding: "7px"
+                                padding: "7px",
+                                margin: "auto"
                             }}
                         />
                     </Link>

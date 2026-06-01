@@ -172,7 +172,7 @@ function Home({theme, setTheme}) {
                 </div>
                 <div className="h-main-fourth">
                     <div className="h-fourth-1">
-                        <h1 className="h-second-h1">Beauty&Healthy</h1>
+                        <h1 className="h-second-h1">Beauty and Healthy</h1>
                         <Link
                             style={{
                                 padding: "10px 40px",
@@ -224,6 +224,7 @@ function Home({theme, setTheme}) {
                         alignItems: "center",
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
                         padding: "10px 40px",
+                        width: "77%",
                         borderRadius: "15px",
                         textDecoration: "none",
                     }}>
@@ -231,7 +232,11 @@ function Home({theme, setTheme}) {
                             🔥 HOT
                             NEW
                         </h1>
-                        <h2>
+                        <h2
+                            style={{
+                                textAlign: "center",
+                            }}
+                        >
                             Limited time offers you can’t miss
                         </h2>
                         <button
@@ -255,9 +260,86 @@ function Home({theme, setTheme}) {
                 </div>
             </div>
             <div className="h-main-blogs">
-                <div></div>
-                <div></div>
-                <div></div>
+                <h1
+                    style={{
+                        color: "black",
+                        textAlign: "center",
+                        margin: "40px auto"
+                    }}
+                >Blogs</h1>
+                <div className="h-blog-1">
+                    <h2 style={{
+                        textAlign: "center",
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
+                        color: "white",
+                        padding: "20px 40px",
+                    }}>
+                        Summer sales have begun —
+                        don't miss the alerts at Shoppiest!
+                    </h2>
+                    <Link
+                        style={{
+                            padding: "10px 40px",
+                            fontSize: "17px",
+                            color:"white",
+                            backgroundColor: "black",
+                            borderRadius: "15px",
+                            fontWeight: "bold",
+                            textDecoration: "none",
+                        }}
+                        to="Blog"
+                    >
+                        Let's look
+                    </Link>
+                </div>
+                <div className="h-blog-2">
+                    <h2 style={{
+                        textAlign: "center",
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
+                        color: "white",
+                        padding: "20px 40px",
+                    }}>
+                        This Month's Trending Products
+                    </h2>
+                    <Link
+                        style={{
+                            padding: "10px 40px",
+                            fontSize: "17px",
+                            color:"white",
+                            backgroundColor: "black",
+                            borderRadius: "15px",
+                            fontWeight: "bold",
+                            textDecoration: "none",
+                        }}
+                        to="Blog"
+                    >
+                        Let's look
+                    </Link>
+                </div>
+                <div className="h-blog-3">
+                    <h2 style={{
+                        textAlign: "center",
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
+                        color: "white",
+                        padding: "20px 40px",
+                    }}>
+                        What Our Customers Say?
+                    </h2>
+                    <Link
+                        style={{
+                            padding: "10px 40px",
+                            fontSize: "17px",
+                            color:"white",
+                            backgroundColor: "black",
+                            borderRadius: "15px",
+                            fontWeight: "bold",
+                            textDecoration: "none",
+                        }}
+                        to="Blog"
+                    >
+                        Let's look
+                    </Link>
+                </div>
             </div>
             <Footer/>
         </div>
