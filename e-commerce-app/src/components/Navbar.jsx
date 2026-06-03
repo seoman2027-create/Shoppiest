@@ -1,9 +1,16 @@
 import "../App.css"
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link, NavLink} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 
 function Navbar({theme, setTheme}) {
+    useEffect(() => {
+        console.log("Navbar yaradıldı");
+
+        return () => {
+            console.log("Navbar silindi");
+        };
+    }, []);
     const [showSearch, setShowSearch] = useState(false);
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem("userToken");
@@ -83,57 +90,66 @@ function Navbar({theme, setTheme}) {
                         />
                     </Link>
                 </div>
-                <div className="menu-icon" onClick={() => setOpen(!open)}>{open ? "✕" : "☰"}</div>
+                <div className="burger-icon" onClick={() => setOpen(!open)}>{open? "  " : "☰"}</div>
                 <div className="n_s_div">
-                    <div className={open ? "active" : "nav-links"}>
-                        <NavLink
-                            className={
-                                ({ isActive }) => isActive ? "active" : "n-h-links"
-                            }
-                            to={"/"}
-                            end
-                        >
-                            HOME
-                        </NavLink>
-                        <NavLink
-                            className={
-                                ({ isActive }) => isActive ? "active" : "n-h-links"
-                            }
-                            to={"/Items"}
-                            end
-                        >
-                            ITEMS
-                        </NavLink>
-                        <NavLink
-                            className={
-                                ({ isActive }) => isActive ? "active" : "n-h-links"
-                            }
-                            to={"/Promo"}
-                            end
-                        >
-                            PROMOTIONS
-                        </NavLink>
-                        <NavLink
-                            className={
-                                ({ isActive }) => isActive ? "active" : "n-h-links"
-                            }
-                            to={"/About"}
-                            end
-                        >
-                            ABOUT
-                        </NavLink>
-                        <NavLink
-                            className={
-                                ({ isActive }) => isActive ? "active" : "n-h-links"
-                            }
-                            to={"/Contact"}
-                            end
-                            style={{
-                                marginRight: "20px"
-                            }}
-                        >
-                            CONTACT
-                        </NavLink>
+                    <div
+                        className={open ? "sidebar" : "nav-links"}
+                    >
+                        {open &&
+                            (
+                                <>
+                                    <div
+                                        onClick={() => setOpen(!open)}
+                                        className="x-icon"
+                                    >
+                                        {"✕"}
+                                    </div>
+                                    <h1
+                                        style={{
+                                            textAlign: "center",
+                                            marginBottom: "20px",
+                                            fontSize: "18px",
+                                        }}
+                                        className="n-h-links, menu"
+                                    >MENU
+                                    </h1>
+                                </>
+                            )}
+                                <NavLink
+                                    className={({isActive}) => isActive ? "active" : "n-h-links"}
+                                    to={"/"}
+                                    end
+                                >
+                                    HOME
+                                </NavLink>
+                                <NavLink
+                                    className={({isActive}) => isActive ? "active" : "n-h-links"}
+                                    to={"/Items"}
+                                    end
+                                >
+                                    ITEMS
+                                </NavLink>
+                                <NavLink
+                                    className={({isActive}) => isActive ? "active" : "n-h-links"}
+                                    to={"/Promo"}
+                                    end
+                                >
+                                    PROMOTIONS
+                                </NavLink>
+                                <NavLink
+                                    className={({isActive}) => isActive ? "active" : "n-h-links"}
+                                    to={"/About"}
+                                    end
+                                >
+                                    ABOUT
+                                </NavLink>
+                                <NavLink
+                                    className={({isActive}) => isActive ? "active" : "n-h-links"}
+                                    to={"/Contact"}
+                                    end
+                                >
+                                    CONTACT
+                                </NavLink>
                     </div>
                     <a href={"#link"}>
                         <img

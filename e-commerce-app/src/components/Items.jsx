@@ -47,7 +47,7 @@ function Items({theme, setTheme}) {
             <Navbar theme={theme} setTheme={setTheme} />
             <div className={"items-starter"}>
                 <h1>Big Summer Sale!</h1>
-                <p>Up to <spans id="items-span-first">50% Off</spans> on Selected Items</p>
+                <p>Up to <span id="items-span-first">50% Off</span> on Selected Items</p>
             </div>
             <div className="items-main">
                 <div className="items-categories">

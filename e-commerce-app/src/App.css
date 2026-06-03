@@ -135,12 +135,11 @@ select{
 .h-main-1{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-top: 200px;
-    margin-left: 40px;
-    margin-right: 240px;
+    margin: 200px auto auto auto;
     color: black;
+    padding: 20px;
 }
 .h-main-2{
     display: flex;
@@ -745,12 +744,14 @@ From this line Items.jsx starts
 .items-sceletone{
     width: 100%;
     background-color: #e1dede;
+    margin-right: 0;
 }
 .items-main{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: start;
+    margin: 0;
 }
 @media(max-width: 768px){
     .items-main{
@@ -781,7 +782,7 @@ From this line Items.jsx starts
     background-color: white;
     padding: 20px 40px;
     width: 40%;
-    min-width: 167px;
+    min-width: 100px;
 }
 #ul-categories {
     padding: 10px 10px 10px 0;
@@ -793,7 +794,6 @@ From this line Items.jsx starts
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px;
     width: 80%;
 }
 #items-select{
@@ -801,6 +801,7 @@ From this line Items.jsx starts
     padding: 10px;
     color: black;
     border-radius: 10px;
+    margin-right: 0;
 }
 #items-search-input{
     border-radius: 10px;
@@ -917,19 +918,7 @@ From this line Promotions.jsx starts
     text-decoration: none;
 }
 .n-h-links:hover{
-    border-radius: 13%;
-    cursor: pointer;
     transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-.active{
-    border-bottom: 2px solid black;
-    font-size: 14px;
-    color: black;
-    font-weight: bolder;
-    text-decoration: none;
-    margin-right: 5px;
-    transition: transform 0.3s ease;
 }
 .n_f_div{
     margin-left: 5px;
@@ -942,27 +931,80 @@ From this line Promotions.jsx starts
     padding: 20px;
     gap: 13px;
 }
-.menu-icon{
+.burger-icon{
     display: none;
+}
+.active{
+    border-bottom: 2px solid white;
+    margin-left: 5px;
+    font-size: 14px;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.active:hover{
+    transform: scale(1.2);
+}
+@media(min-width: 768px){
+    .x-icon{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
 }
 @media screen and (max-width: 768px){
     .nav-links {
         display: none;
+    }
+    .burger-icon{
+        color: white;
+        cursor: pointer;
+        font-size: 23px;
+        text-align: right;
+    }
+    .x-icon{
+        color: white;
+        cursor: pointer;
+        font-size: 23px;
+        text-align: right;
+    }
+    .sidebar{
+        display: flex;
         flex-direction: column;
-        width: 200px;
-        padding: 20px;
-        gap: 5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: auto;
+        width: 30%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 36px;
     }
     .n-h-links{
         display: flex;
         flex-direction: column;
+        color: white;
+        margin: 5px;
     }
-    .menu-icon{
+    .burger-icon{
         display: block;
         color: black;
         cursor: pointer;
         font-size: 23px;
         margin: auto auto auto 10px;
+    }
+    .n_s_div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: auto;
+        gap: 13px;
     }
 }
 .theme-icon {

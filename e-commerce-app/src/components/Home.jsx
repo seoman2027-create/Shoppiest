@@ -239,17 +239,21 @@ function Home({theme, setTheme}) {
                         >
                             Limited time offers you can’t miss
                         </h2>
-                        <button
+                        <Link
                             style={{
                                 padding: "10px 40px",
                                 fontSize: "17px",
                                 color: "black",
                                 border: "none",
                                 borderRadius: "15px",
+                                backgroundColor: "white",
                                 marginTop: "20px",
                                 fontWeight: "bold"
                             }}
-                        >Shop now</button>
+                            to="/Items"
+                        >
+                            Shop now
+                        </Link>
                         <div className="div-span">
                             <div className="h-main-span"> {days}<p> days </p></div>
                             <div className="h-main-span">{hours} <p> hours </p></div>
