@@ -135,19 +135,18 @@ select{
 .h-main-1{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
-    margin: 200px auto auto auto;
+    margin: 200px auto 50px auto;
     color: black;
     padding: 20px;
 }
 .h-main-2{
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    align-items: end;
-    margin-top: 200px;
-    margin-bottom: 0;
+    justify-content: start;
+    align-items: start;
+    margin: 70px auto 10px auto;
 }
 .h-main-second{
     display: flex;
@@ -156,6 +155,32 @@ select{
     align-items: center;
     width: 100%;
     margin-top: 40px;
+}
+.h-link-style{
+    padding: 10px 40px;
+    font-size: 17px;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.h-duties{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    color: black;
+    padding: 10px;
+}
+@media(max-width: 768px){
+    .h-main-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        margin-bottom: 30px;
+    }
 }
 .h-second-h1{
     display: block;
@@ -384,13 +409,9 @@ select{
     background-size: cover;
     background-position: center;
 }
+
 /* This is for only shopping-cart.jsx
 */
-
-
-
-
-
 .base{
     display: flex;
     flex-direction: column;
@@ -406,14 +427,37 @@ select{
 .s_main_first{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    color: #000000;
-    width: 70%;
+    color: black;
     height: 100%;
+    margin: auto;
+    max-width: fit-content;
     border: 1px solid gray;
     border-radius: 10px;
-    margin: 0 10px 0 20px;
+    padding: 20px;
+}
+#s-c-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+}
+.s-item-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 0 5px auto 5px;
+}
+.s-del-button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-weight: bolder;
 }
 .s_main_second{
     display: flex;
@@ -425,39 +469,43 @@ select{
     max-width: fit-content;
     border: 1px dashed black;
     border-radius: 8px;
+    width: 100%;
     background-color: white;
-    margin: auto 20px auto auto;
+    margin: auto;
 }
-/*@media(max-width: 768px){
+@media(max-width: 768px){
+    .s_main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
     .s_main_first{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-around;
         align-items: center;
-        color: #000000;
-        width: 58%;
+        color: black;
         flex-wrap: wrap;
         border-radius: 10px;
+        margin: 20px 10px;
     }
     .s_main_second{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: space-around;
+        align-items: center;
         color: black;
-        padding-left: 10px;
-        width: 42%;
-        max-width: 300px;
-        flex-wrap: wrap;
-        min-height: 100%;
-        border: 0.5px dashed black;
+        max-width: fit-content;
+        border: 1px dashed black;
         border-radius: 8px;
         flex-wrap: nowrap;
-        padding: 10px;
+        margin: 10px 20px;
     }
     .s_m_input{
     }
-}*/
+}
 .s_m_input{
     display: flex;
     flex-direction: row;
@@ -697,23 +745,59 @@ From this line begins Profile.jsx
     align-items: center;
     background-color: #8f8d8d;
     padding: 15px;
-    margin: 15px;
+    flex-wrap: wrap;
+    min-width: 10px;
+    max-width: 100%;
 }
 .prof-main-div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     width: 100%;
+}
+.profile-header{
+    text-align: center;
+    color: black;
+    font-size: 25px;
 }
 .prof-first-div-1,
 .prof-first-div-2,
 .prof-first-div-3,
 .prof-first-div-4{
-    padding:  20px 20px 20px 5px;
-    margin: 20px 20px 20px 5px;
+    padding:  15px 15px 15px 5px;
+    margin: 10px 10px 10px 5px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+.prof-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    max-width: 240px;
+    color: black;
+    margin-bottom: 4px;
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #e1dede;
+}
+@media(max-width: 768px){
+    .prof-first-div-1,
+    .prof-first-div-2,
+    .prof-first-div-3,
+    .prof-first-div-4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
 sup{
     color: red;
@@ -744,7 +828,6 @@ From this line Items.jsx starts
 .items-sceletone{
     width: 100%;
     background-color: #e1dede;
-    margin-right: 0;
 }
 .items-main{
     display: flex;
@@ -754,11 +837,38 @@ From this line Items.jsx starts
     margin: 0;
 }
 @media(max-width: 768px){
+    .items-sceletone{
+        width: 100%;
+        background-color: #e1dede;
+        margin: 0;
+    }
     .items-main{
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        margin: 5px;
+        align-items: center;
         flex-wrap: wrap;
+    }
+    .items-product-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 280px;
+        width: 150px;
+        padding: 15px;
+        margin: 5px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: visible;
+    }
+    .items-categories{
         margin: 20px;
+        color: black;
+        background-color: white;
+        padding: 20px 40px;
+        width: 100%;
     }
 }
 .items-starter{
@@ -823,9 +933,9 @@ From this line Items.jsx starts
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    height: 280px;
-    width: 190px;
-    padding: 20px;
+    height: 300px;
+    width: 200px;
+    padding: 15px;
     margin: 20px 5px;
     background-color: white;
     border-radius: 10px;
@@ -877,37 +987,41 @@ From this line Promotions.jsx starts
 .promo_main_first{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 10px;
     align-items: center;
-    margin-top: 40px;
+    margin: 10px 10px 0 10px;
 }
 .main-promos{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
-    margin: 40px;
-    padding: 40px;
+    justify-content: space-around;
+    align-items: start;
+    margin: 0;
+    padding: 20px;
+}
+.main-promos div{
+    color: white;
+    background-color: #312770;
+    padding: 20px;
+    margin: auto 10px 10px 10px;
+    border-radius: 10px;
+    max-width: 250px;
 }
 
 /*
     From this line begins Navbar.jsx
 */
-
-.n_search_input{
-    position: absolute;
-    top: 78px;
-    right: 190px;
-    height: 30px;
-    width: 200px;
-    border: none;
-    outline: none;
-    border-radius: 30px;
-    transform: scale(0.95);
+.nav-sceletone{
+    width: 100%;
+    margin: 0;
 }
-.n_search_input:active{
-    transition: transform 0.3s ease;
+.search-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .n-h-links{
     margin-right: 5px;
@@ -936,7 +1050,7 @@ From this line Promotions.jsx starts
 }
 .active{
     border-bottom: 2px solid white;
-    margin-left: 5px;
+    margin: 5px;
     font-size: 14px;
     color: white;
     font-weight: bolder;
@@ -953,10 +1067,18 @@ From this line Promotions.jsx starts
     .menu{
         display: none;
     }
+    .nav-sceletone{
+        width: 100%;
+        margin: 0;
+    }
 }
 @media screen and (max-width: 768px){
     .nav-links {
         display: none;
+    }
+    .nav-sceletone{
+        width: 100%;
+        margin: 0;
     }
     .burger-icon{
         color: white;
@@ -1014,21 +1136,22 @@ From this line Promotions.jsx starts
 .theme-icon.light {
     transform: rotate(360deg);
 }
-
 .theme-icon.dark {
     transform: rotate(180deg);
 }
-
+.search-input:active{
+    border: none;
+}
 .n_img_link{
-    margin-bottom: 5px;
-    transition: transform 0.3s ease;
+    padding: 5px;
+    border-radius: 30%;
+    transition: transform 0.5s ease;
 }
 .n_img_link:hover{
-    cursor: pointer;
-    background-color: white;
-    border-radius: 50%;
     transform: scale(1.2);
-    transition: transform 0.3s ease;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 30%;
 }
 .n_head{
     display: flex;
@@ -1045,6 +1168,7 @@ From this line Promotions.jsx starts
     color: white;
     background-color: orange;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 100%;
 }
 .n-select{
     display: flex;
@@ -1062,6 +1186,7 @@ From this line Promotions.jsx starts
     background-color: gray;
     color: white;
     margin-top: 40px;
+    width: 100%;
 }
 .f-basic-con{
     display: flex;
@@ -1181,3 +1306,25 @@ From this line begins Product-details.jsx
     From this line begins Blog.jsx
 */
 
+/*
+    From this line begins Faq.jsx
+*/
+.faq-main{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+.req-res{
+    background-color: gray;
+    margin: 15px;
+    padding: 10px;
+    color: white;
+}
+.req-res p{
+    text-align: left;
+}
+.req-res h2{
+    font-size: 20px;
+}

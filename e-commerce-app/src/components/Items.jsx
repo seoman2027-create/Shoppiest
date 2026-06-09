@@ -14,11 +14,11 @@ export const allProducts = [
     { name: "Apple smartwatch", category: ["electronics", "gifts"], price: 250.15, img: `${process.env.PUBLIC_URL}/smartwatch.png`, width: 160, height: 160, source: "/Details?item=smartwatch" },
     { name: "Leather handback", category: "fashion", price: 80.22, img: `${process.env.PUBLIC_URL}/handback.png`, width: 160, height: 160, source: "/Details?item=handback" },
     { name: "Huawei smartphone", category: "electronics", price: 450.46, img: `${process.env.PUBLIC_URL}/smartphone.png`, width: 160, height: 160, source: "/Details?item=smartphones" },
-    { name: "Sunglasses", category: ["fashion", "gifts"], price: 60.37, img: `${process.env.PUBLIC_URL}/sunglasses.webp`, width: 220, height: 160, source: "/Details?item=sunglasses" },
+    { name: "Sunglasses", category: ["accessories"], price: 60.37, img: `${process.env.PUBLIC_URL}/sunglasses.webp`, width: 220, height: 160, source: "/Details?item=sunglasses" },
     { name: "Home lamp", category: "home", price: 40, img: `${process.env.PUBLIC_URL}/lamp.png`, width: 160.48, height: 160, source: "/Details?item=lamp" },
     { name: "Nicon hand camera", category: "electronics", price: 700.99, img: `${process.env.PUBLIC_URL}/camera.png`, width: 180, height: 180, source: "/Details?item=camera" },
     { name: "TriDerma hand cream", category: "beauty", price: 25.57, img: `${process.env.PUBLIC_URL}/hand-cream.png`, width: 160, height: 160, source: "/Details?item=hand-cream" },
-    { name: "De Beers bracelet", category: ["fashion", "accessories", "gifts"], price: 350.55, img: `${process.env.PUBLIC_URL}/bracelet.png`, width: 160, height: 160, source: "/Details?item=bracelet" },
+    { name: "De Beers bracelet", category: ["accessories", "gifts"], price: 350.55, img: `${process.env.PUBLIC_URL}/bracelet.png`, width: 160, height: 160, source: "/Details?item=bracelet" },
     { name: "Thalia Olive Oil Cream", category: "beauty", price: 30.97, img: `${process.env.PUBLIC_URL}/oil-cream.png`, width: 160, height: 160, source: "/Details?item=oil-cream" },
     { name: "Haute Luxe Eau De Parfume", category: ["beauty", "accessories", "gifts"], price: 120.88, img: `${process.env.PUBLIC_URL}/parfume.png`, width: 120, height: 120, source: "/Details?item=parfume" },
     { name: "HP Laptop", category: "electronics", price: 1000.76, img: `${process.env.PUBLIC_URL}/laptop.png`, width: 150, height: 160, source: "/Details?item=laptop" },
@@ -27,15 +27,27 @@ export const allProducts = [
 function Items({theme, setTheme}) {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
+    const search = params.get("search");
     const category = params.get("category");
     const [product, setProduct] = useState([]);
-
     const products = category
         ? allProducts.filter(p => Array.isArray(p.category)
             ? p.category.includes(category)
             : p.category === category)
         : allProducts;
-
+    let result = [...allProducts]
+    if (search) {
+        result = result.filter((product) =>
+            product.name.toLowerCase().includes(search.toLowerCase())
+        );
+    }else if(category !== "all"){
+        result = result.filter((product) =>
+            Array.isArray(product.category)
+                ? product.category.includes(category)
+                : product.category === category
+        );
+    }
+    const filteredProducts = result
     useEffect(() => {
         fetch("/api/products?category=fashion")
             .then(res => res.json())
@@ -51,7 +63,7 @@ function Items({theme, setTheme}) {
             </div>
             <div className="items-main">
                 <div className="items-categories">
-                    <h3>{category ? category.toUpperCase() : "All Products"}</h3>
+                    <h3>{category ? category.toUpperCase() : "ALL PRODUCTS"}</h3>
                     <hr/>
                     <ul id="ul-categories">
                         <li><Link to="/Items" className={"items-link"}>All products →</Link></li>
@@ -66,20 +78,6 @@ function Items({theme, setTheme}) {
                 </div>
                 <div className="items-main-first">
                     <div className="items-filter">
-                        <input
-                            type={"text"}
-                            id={"items-search-input"}
-                        />
-                        <a href={"#link"}>
-                            <img
-                                src={`${process.env.PUBLIC_URL}/search_icon.png`}
-                                style={{
-                                    width: "20px",
-                                    paddingLeft: "0"
-                                }}
-                                alt={"Link"}
-                            />
-                        </a>
                         <p
                             style={{
                                 color: "black",
@@ -96,39 +94,118 @@ function Items({theme, setTheme}) {
                         </select>
                     </div>
                     <div className="items-products">
-                        {products.map((p,index) => (
-                            <div
-                                key={index}
-                                className={"items-product-div"}
-                            >
-                                <img
-                                    src={p.img}
-                                    alt={p.name}
+                        {search ?
+                            filteredProducts.map((p, index) => (
+                                <div
+                                    key={index}
                                     style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        width: p.width,
-                                        height: p.height,
-                                        marginTop: "20px",
-                                        padding: "10px",
+                                        position: "relative",
+                                        alignItems: "start",
+                                        overflow: "visible",
                                     }}
-                                />
-                                <Link
-                                    to={p.source}
-                                    className={"items-product-h4"}
-                                >{p.name}
-                                </Link>
-                                <p
-                                    className={"items-product-h4"}
-                                >${p.price}</p>
-                                <input
-                                    type="submit"
-                                    value="Add to Cart"
-                                    className="i-div-button"
-                                />
-                            </div>
-                        ))}
+                                >
+                                    <div
+                                        style={{
+                                        }}
+                                    >
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/love.png`}
+                                            style={{
+                                                position: "absolute",
+                                                top: "40px",
+                                                right: "20px",
+                                                width: "20px",
+                                                marginLeft: "10px",
+                                                zIndex: "10",
+                                                color: "black",
+                                            }}
+                                            alt={"love-icon"}
+                                        />
+                                    </div>
+                                    <div
+                                        className={"items-product-div"}>
+                                        <img
+                                            src={p.img}
+                                            alt={p.name}
+                                            style={{
+                                                width: p.width,
+                                                height: p.height,
+                                                margin: "10px",
+                                                padding: "10px",
+                                            }}
+                                        />
+                                        <Link
+                                            to={p.source}
+                                            className={"items-product-h4"}
+                                        >{p.name}
+                                        </Link>
+                                        <p
+                                            className={"items-product-h4"}
+                                        >${p.price}</p>
+                                        <input
+                                            type="submit"
+                                            value="Add to Cart"
+                                            className="i-div-button"
+                                        />
+                                    </div>
+                                </div>
+                            ))
+                            : products.map((p, index) => (
+                                    <div
+                                        key={index}
+                                        style={{
+                                            position: "relative",
+                                            alignItems: "start",
+                                            overflow: "visible",
+                                        }}
+                                    >
+                                        <div
+                                            style={{
+                                            }}
+                                        >
+                                            <img
+                                                src={`${process.env.PUBLIC_URL}/love.png`}
+                                                style={{
+                                                    position: "absolute",
+                                                    top: "40px",
+                                                    right: "20px",
+                                                    width: "20px",
+                                                    marginLeft: "10px",
+                                                    zIndex: "10",
+                                                    color: "black",
+                                                }}
+                                                alt={"love-icon"}
+                                            />
+                                        </div>
+                                        <div
+                                            className={"items-product-div"}>
+                                            <img
+                                                src={p.img}
+                                                alt={p.name}
+                                                style={{
+                                                    width: p.width,
+                                                    height: p.height,
+                                                    margin: "10px",
+                                                    padding: "10px",
+                                                }}
+                                            />
+                                            <Link
+                                                to={p.source}
+                                                className={"items-product-h4"}
+                                            >{p.name}
+                                            </Link>
+                                            <p
+                                                className={"items-product-h4"}
+                                            >${p.price}</p>
+                                            <input
+                                                type="submit"
+                                                value="Add to Cart"
+                                                className="i-div-button"
+                                            />
+                                        </div>
+                                    </div>
+                                ))
+                        }
                     </div>
                 </div>
             </div>

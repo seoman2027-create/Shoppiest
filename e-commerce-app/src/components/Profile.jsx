@@ -28,33 +28,11 @@ function Profile(){
         <div className="prof-main-div">
             <Navbar/>
             <h1
-                style={{
-                    textAlign: "center",
-                    color: "black",
-                    marginBottom: "2.7rem",
-                }}
+                className={"profile-header"}
             >
                 Account settings
             </h1>
             <div className="prof-first-div">
-                <div>
-                    {image &&
-                        <img
-                            src={image}
-                            alt="Profile"
-                            width="60px"
-                            style={{
-                                borderRadius: "50%",
-                                objectFit: "cover",
-                            }}
-                        />
-                    }
-                    <input
-                        type="file"
-                        onChange={handleImageChange}
-                    />
-                    <button className="prof-button" onClick={deleteImage}>Delete avatar</button>
-                </div>
                 <div className="prof-first-div-1">
                     <div style={{
                         display: "flex",
@@ -109,58 +87,36 @@ function Profile(){
                     </div>
                 </div>
                 <div className="prof-first-div-3">
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "flex-start",
-                            alignItems: "flex-start",
-                            width: "100%",
-                        }}
-                        >
-                        <div>
-                            <label
-                                style={{
-                                    marginBottom: "3px"
-                                }}
-                            >Gender</label>
-                            <form
-                                style={{
-                                    display: "flex",
-                                    flexDirection: "row",
-                                    justifyContent: "space-around",
-                                    alignItems: "center",
-                                    backgroundColor: "white",
-                                    color: "black",
-                                    marginBottom: "4px",
-                                    height: "43px",
-                                    width: "200px",
-                                    borderRadius: "8px",
-                                    border: "1px solid #e1dede"
-                                }}>
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="gender"
-                                    />
-                                    Male
-                                </label>
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="gender"
-                                    />
-                                    Female
-                                </label>
-                            </form>
-                        </div>
+                    <div>
+                        <label
+                            style={{
+                                marginBottom: "3px"
+                            }}
+                        >Gender</label>
+                        <form
+                            className={"prof-form"}
+                            style={{
+                            }}>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                />
+                                Male
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                />
+                                Female
+                            </label>
+                        </form>
                     </div>
                     <div style={{
                         display: "flex",
                         flexDirection: "column",
-                        padding: "10px",
-                        marginBottom: "5px",
-                        maxWidth: "50%"
+                        margin: "10px 20px"
                     }}>
                         <label>ID</label>
                         <input
@@ -181,7 +137,7 @@ function Profile(){
                         type="textarea"
                         style={{
                             height: "100px",
-                            width: "430px"
+                            minWidth: "350px"
                         }}
                     />
                 </div>

@@ -53,36 +53,36 @@ function Home({theme, setTheme}) {
                         >
                             Start shopping
                         </Link>
-                        <div className="h-main-2">
-                            <p>
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/security.png`}
-                                    alt="security icons"
-                                    style={{
-                                        width: "35px",
-                                    }}
-                                />
-                            </p>
+                    </div>
+                    <div className="h-main-2">
+                        <div className="h-duties">
+                            <img
+                                src={`${process.env.PUBLIC_URL}/security.png`}
+                                alt="security icons"
+                                style={{
+                                    width: "35px",
+                                }}
+                            />
                             <p>Security payments</p>
-                            <p>
-                                <img
-                                        src={`${process.env.PUBLIC_URL}/support.png`}
-                                    alt="security icons"
-                                    style={{
-                                        width: "35px",
-                                    }}
-                                />
-                            </p>
+                        </div>
+                        <div className="h-duties">
+                            <img
+                                src={`${process.env.PUBLIC_URL}/support.png`}
+                                alt="security icons"
+                                style={{
+                                    width: "35px",
+                                }}
+                            />
                             <p>Customer Support</p>
-                            <p>
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/delivery.png`}
-                                    alt="security icons"
-                                    style={{
-                                        width: "40px",
-                                    }}
-                                />
-                            </p>
+                        </div>
+                        <div className="h-duties">
+                            <img
+                                src={`${process.env.PUBLIC_URL}/delivery.png`}
+                                alt="security icons"
+                                style={{
+                                    width: "40px",
+                                }}
+                            />
                             <p>Fast Delivery</p>
                         </div>
                     </div>
@@ -103,15 +103,7 @@ function Home({theme, setTheme}) {
                         <h1 className="h-second-h1">Fashion</h1>
                         <Link
                             to="/Items?category=fashion"
-                            style={{
-                                padding: "10px 40px",
-                                fontSize: "17px",
-                                color:"white",
-                                backgroundColor: "black",
-                                borderRadius: "15px",
-                                fontWeight: "bold",
-                                textDecoration: "none",
-                            }}
+                            className="h-link-style"
                         >
                             Let's look
                         </Link>
@@ -119,15 +111,7 @@ function Home({theme, setTheme}) {
                     <div className="h-second-2">
                         <h1 className="h-second-h1">Home</h1>
                         <Link
-                            style={{
-                                padding: "10px 40px",
-                                fontSize: "17px",
-                                color:"white",
-                                backgroundColor: "black",
-                                borderRadius: "15px",
-                                fontWeight: "bold",
-                                textDecoration: "none",
-                            }}
+                            className="h-link-style"
                             to="Items?category=home"
                         >
                             Let's look
@@ -138,15 +122,7 @@ function Home({theme, setTheme}) {
                     <div className="h-third-1">
                         <h1 className="h-second-h1">Accessories</h1>
                         <Link
-                            style={{
-                                padding: "10px 40px",
-                                fontSize: "17px",
-                                color:"white",
-                                backgroundColor: "black",
-                                borderRadius: "15px",
-                                fontWeight: "bold",
-                                textDecoration: "none",
-                            }}
+                            className="h-link-style"
                             to="Items?category=accessories"
                         >
                             Let's look
@@ -155,15 +131,7 @@ function Home({theme, setTheme}) {
                     <div className="h-third-2">
                         <h1 className="h-second-h1">Electronics</h1>
                         <Link
-                            style={{
-                                padding: "10px 40px",
-                                fontSize: "17px",
-                                color:"white",
-                                backgroundColor: "black",
-                                borderRadius: "15px",
-                                fontWeight: "bold",
-                                textDecoration: "none",
-                            }}
+                            className="h-link-style"
                             to="Items?category=electronics"
                         >
                             Let's look
@@ -174,15 +142,7 @@ function Home({theme, setTheme}) {
                     <div className="h-fourth-1">
                         <h1 className="h-second-h1">Beauty and Healthy</h1>
                         <Link
-                            style={{
-                                padding: "10px 40px",
-                                fontSize: "17px",
-                                color:"white",
-                                backgroundColor: "black",
-                                borderRadius: "15px",
-                                fontWeight: "bold",
-                                textDecoration: "none",
-                            }}
+                            className="h-link-style"
                             to="Items?category=beauty"
                         >
                             Let's look
@@ -191,15 +151,7 @@ function Home({theme, setTheme}) {
                     <div className="h-fourth-2">
                         <h1 className="h-second-h1">Gifts</h1>
                         <Link
-                            style={{
-                                padding: "10px 40px",
-                                fontSize: "17px",
-                                color:"white",
-                                backgroundColor: "black",
-                                borderRadius: "15px",
-                                fontWeight: "bold",
-                                textDecoration: "none",
-                            }}
+                            className="h-link-style"
                             to="Items?category=gifts"
                         >
                             Let's look

@@ -1,20 +1,19 @@
 import "../App.css"
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {Link, NavLink} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 
 function Navbar({theme, setTheme}) {
-    useEffect(() => {
-        console.log("Navbar yaradıldı");
-
-        return () => {
-            console.log("Navbar silindi");
-        };
-    }, []);
-    const [showSearch, setShowSearch] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem("userToken");
     const [open, setOpen] = useState(false);
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        if(searchTerm.trim()){
+            navigate(`/Items?search=${searchTerm}`);
+        }
+    };
 
 
     const handleClick = () => {
@@ -25,7 +24,7 @@ function Navbar({theme, setTheme}) {
         }
     }
     return (
-        <>
+        <div className="nav-sceletone">
             <nav className="n_navbar">
                 <p
                     style={{
@@ -150,30 +149,46 @@ function Navbar({theme, setTheme}) {
                                 >
                                     CONTACT
                                 </NavLink>
+                                <NavLink
+                                    className={({isActive}) => isActive ? "active" : "n-h-links"}
+                                    to={"/Faq"}
+                                    end
+                                >
+                                    FAQ
+                                </NavLink>
                     </div>
-                    <a href={"#link"}>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/search_icon.png`}
-                            alt="search-link"
-                            className="n_img_link"
-                            style={{
-                                width:"20px",
-                                padding: "10px",
-                                margin: "auto"
-                            }}
-                            onClick={() => setShowSearch(!showSearch)}
-                        />
-                    </a>
-                    {
-                        showSearch && (
+                    <div className="search-area">
+                        <form onSubmit={handleSearchSubmit} style={{ width: "90%" }}>
                             <input
                                 type="text"
-                                placeholder="Search..."
-                                className="n_search_input"
-                                autoFocus
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                placeholder="Search item"
+                                value={searchTerm}
+                                className="search-input"
+                                style={{
+                                    width: "100%",
+                                    backgroundColor: "white",
+                                    height: "30px",
+                                    border: "none",
+                                    borderRadius: "5px",
+                                    fontSize: "14px",
+                                }}
                             />
-                        )
-                    }
+                        </form>
+                        <Link
+                            to={`/Items?search=${searchTerm}`}
+                        >
+                            <img
+                                src={`${process.env.PUBLIC_URL}/search_icon.png`}
+                                alt="search-link"
+                                style={{
+                                    width:"20px",
+                                    padding: "0 10px",
+                                    margin: "auto",
+                                }}
+                            />
+                        </Link>
+                    </div>
                     <Link
                         to={"/Profile"}
                     >
@@ -184,7 +199,7 @@ function Navbar({theme, setTheme}) {
                             width={"20px"}
                             onClick={handleClick}
                             style={{
-                                padding:"10px",
+                                padding:"6px",
                                 width: "20px",
                                 margin: "auto"
                             }}
@@ -200,14 +215,14 @@ function Navbar({theme, setTheme}) {
                             style={{
                                 width:"28px",
                                 flexWrap:"wrap",
-                                padding: "7px",
+                                padding: "4px",
                                 margin: "auto"
                             }}
                         />
                     </Link>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
