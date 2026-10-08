@@ -17,10 +17,10 @@
       <assistant-state connection-id="225e2af7-56d4-423c-aab6-f99db4b9b711" assistant-type="SELECT_AI" default-profile-name="" selected-chat-id="" availability="UNAVAILABLE" acknowledgement="NONE" selected="true">
         <tools />
       </assistant-state>
-      <assistant-state connection-id="virtual-mysql-connection" assistant-type="SELECT_AI" default-profile-name="" selected-chat-id="" availability="UNAVAILABLE" acknowledgement="NONE">
+      <assistant-state connection-id="virtual-mysql-connection" assistant-type="PUBLIC" default-profile-name="" selected-chat-id="" availability="AVAILABLE" acknowledgement="NONE" selected="true">
         <tools />
       </assistant-state>
-      <assistant-state connection-id="virtual-mysql-connection" assistant-type="PUBLIC" default-profile-name="" selected-chat-id="" availability="AVAILABLE" acknowledgement="NONE" selected="true">
+      <assistant-state connection-id="virtual-mysql-connection" assistant-type="SELECT_AI" default-profile-name="" selected-chat-id="" availability="UNAVAILABLE" acknowledgement="NONE">
         <tools />
       </assistant-state>
     </assistants>
