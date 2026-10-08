@@ -14,7 +14,7 @@ function Details() {
 
     useEffect(() => {
         const mainData = async () => {
-            const response = await fetch(`http://localhost:5000/api/products/${id}`);
+            const response = await fetch(`https://shoppiest-backend.onrender.com/api/products/${id}`);
             const clearData = await response.json()
             setProduct(clearData)
         }

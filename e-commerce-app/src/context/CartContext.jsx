@@ -9,7 +9,7 @@ export function CartProvider({children}) {
     useEffect(() => {
         const fetchedCart = async () =>{
             try{
-                const response = await fetch(`http://localhost:5000/api/cart/${currentUserId}`);
+                const response = await fetch(`https://shoppiest-backend.onrender.com/api/cart/${currentUserId}`);
                 const clearData = await response.json();
                 setCart(clearData.cart);
             }
@@ -23,7 +23,7 @@ export function CartProvider({children}) {
 
     const addToCart = async (productId, quantity) => {
         try{
-            const response = await fetch('http://localhost:5000/api/cart', {
+            const response = await fetch('https://shoppiest-backend.onrender.com/api/cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ export function CartProvider({children}) {
             const clearData = await response.json();
             if (response.ok){
                 alert('Product added successfully: ' + clearData.message);
-                const newResponse = await fetch(`http://localhost:5000/api/cart/${currentUserId}`)
+                const newResponse = await fetch(`https://shoppiest-backend.onrender.com/api/cart/${currentUserId}`)
                 const newClearData = await newResponse.json();
                 setCart(newClearData.cart);
             }else {
@@ -49,7 +49,7 @@ export function CartProvider({children}) {
     }
     const handleClear = async (cart_id) => {
         try{
-            const response = await fetch(`http://localhost:5000/api/cart/${cart_id}`, {
+            const response = await fetch(`https://shoppiest-backend.onrender.com/api/cart/${cart_id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

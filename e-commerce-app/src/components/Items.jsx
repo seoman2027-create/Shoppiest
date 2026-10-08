@@ -22,13 +22,13 @@ function Items({theme, setTheme}) {
 
     useEffect(() => {
         const mainData = async () => {
-            const response = await fetch('http://localhost:5000/api/products');
+            const response = await fetch('https://shoppiest-backend.onrender.com/api/products');
             const clearData = await response.json();
             setProduct(clearData);
         }
         const fetchWishList = async () => {
             try{
-                const response = await fetch("http://localhost:5000/api/wishlist/1");
+                const response = await fetch("https://shoppiest-backend.onrender.com/api/wishlist/1");
                 const clearData = await response.json();
                 if (clearData.wishlist) {
                     setWishlist(clearData.wishlist);
@@ -45,7 +45,7 @@ function Items({theme, setTheme}) {
 
     const toggleWishList = async (productId) => {
         try{
-            const response = await fetch('http://localhost:5000/api/wishlist', {
+            const response = await fetch('https://shoppiest-backend.onrender.com/api/wishlist', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
