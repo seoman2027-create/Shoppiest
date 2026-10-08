@@ -135,6 +135,9 @@ app.get('/api/wishlist/:user_id', async (req, res)=>{
         res.status(500).json({error:error.message})
     }
 })
+app.get('/', (req, res) => {
+    res.send("Shoppiest API Server is Running Successfully!");
+});
 app.post('/api/cart', async (req, res)=>{
     try{
         const {user_id, product_id, quantity} = req.body;
